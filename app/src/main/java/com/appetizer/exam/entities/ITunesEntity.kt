@@ -1,0 +1,96 @@
+package com.appetizer.exam.entities
+
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
+
+/**
+ * Created by: david on 2019-02-20
+ * All rights reserved.
+ */
+@Entity(tableName = "itunes")
+@Parcelize
+data class ITunesEntity(@PrimaryKey override val id: String,
+                        val wrapperType: String,
+                        val kind: String,
+                        val collectionId: Long,
+                        val trackId: Long,
+                        val artistName: String,
+                        val collectionName: String,
+                        val trackName: String,
+                        val collectionCensoredName: String,
+                        val trackCensoredName: String,
+                        val collectionArtistId: Long,
+                        val collectionArtistViewUrl: String,
+                        val collectionViewUrl: String,
+                        val trackViewUrl: String,
+                        val previewUrl: String,
+                        val artworkUrl30: String,
+                        val artworkUrl60: String,
+                        val artworkUrl100: String,
+                        val collectionPrice: Double,
+                        val trackPrice: Double,
+                        val collectionHdPrice: Double,
+                        val trackHdPrice: Double,
+                        val releaseDate: String,
+                        val collectionExplicitness: String,
+                        val trackExplicitness: String,
+                        val discCount: Int,
+                        val discNumber: Int,
+                        val trackCount: Int,
+                        val trackNumber: Int,
+                        val trackTimeMillis: Long,
+                        val country: String,
+                        val currency: String,
+                        val primaryGenreName: String,
+                        val contentAdvisory: String,
+                        val longDescription: String,
+                        val hasITunesExtras: Boolean,
+                        val trackRentalPrice: Double,
+                        val trackHdRentalPrice: Double,
+                        val shortDescription: String,
+                        val contentAdvisoryRating: String) : BaseEntity(), Parcelable {
+    constructor(): this(
+            id = "34sdf",
+            artistName = "test",
+            artworkUrl30 = "sdfsdf",
+            artworkUrl60 = "arwork60",
+            artworkUrl100 = "artwork100",
+            collectionArtistId = 23523,
+            collectionArtistViewUrl = "collectionARtistURl",
+            collectionCensoredName = "collectionCensoredName",
+            collectionExplicitness = "collectionExplicitness",
+            collectionHdPrice = 234.0,
+            collectionId = 23534251,
+            collectionName = "collectionName",
+            collectionPrice = 235324.0,
+            collectionViewUrl = "collectionViewUrl",
+            contentAdvisory = "contentAdvisory",
+            country = "country",
+            currency = "currency",
+            discCount = 343,
+            discNumber = 1,
+            hasITunesExtras = false,
+            kind = "kind",
+            longDescription = "this is long description",
+            previewUrl = "previewUrl",
+            primaryGenreName = "primaryGenreName",
+            releaseDate = "releaseDAte",
+            trackCensoredName = "trackCensorName",
+            trackCount = 2,
+            trackExplicitness = "trackExplicitness",
+            trackHdPrice = 234.0,
+            trackId = 341323L,
+            trackName = "trackName",
+            trackNumber = 345,
+            trackPrice = 235234.0,
+            trackTimeMillis = 345323423L,
+            trackViewUrl = "trackViewUrl",
+            wrapperType = "wrapperType",
+            trackRentalPrice = 324.0,
+            trackHdRentalPrice = 23432.0,
+            shortDescription = "short description",
+            contentAdvisoryRating = "R"
+    )
+}

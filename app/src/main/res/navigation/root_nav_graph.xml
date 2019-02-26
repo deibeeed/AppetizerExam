@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/root_nav_graph"
+            app:startDestination="@id/ITunesListFragment">
+
+    <fragment
+        android:id="@+id/ITunesListFragment"
+        android:name="com.appetizer.exam.ituneslist.view.ITunesListFragment"
+        android:label="itunes_list_fragment"
+        tools:layout="@layout/itunes_list_fragment">
+        <action
+            android:id="@+id/action_ITunesListFragment_to_ITunesDetailFragment"
+            app:destination="@id/ITunesDetailFragment">
+            <argument
+                android:name="entity"
+                app:argType="com.appetizer.exam.entities.ITunesEntity"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/ITunesDetailFragment"
+        android:name="com.appetizer.exam.itunesdetail.view.ITunesDetailFragment"
+        android:label="itunes_detail_fragment"
+        tools:layout="@layout/itunes_detail_fragment">
+        <argument
+            android:name="entity"
+            app:argType="com.appetizer.exam.entities.ITunesEntity"/>
+    </fragment>
+</navigation>
