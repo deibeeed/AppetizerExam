@@ -14,7 +14,7 @@ Let me explain to you a little bit about the architecture that I used and the li
 * kotlin coroutines - It has the same use as RxJava. Use to replace RxJava to make network calls or heavy lifting process more readable.
 
 ## Persistend storage
-* Used SQLite with Room Database Implementation.
+* Used SQLite with Room Database Implementation..
 
 ## UI Design
 * I'm not really good with design. I just follow what's on the mock ups that was given by the designers.
